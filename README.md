@@ -37,3 +37,22 @@ Run tests:
 ```sh
 pytest
 ```
+
+Assessing test coverage:
+
+```sh
+coverage run -m pytest
+coverage report
+
+# (rps-env)  --->> coverage report
+# Name                Stmts   Miss  Cover
+# ---------------------------------------
+# game.py                30      8    73%
+# game_test.py           14      0   100%
+# my_script.py            2      0   100%
+# my_script_test.py       5      0   100%
+# ---------------------------------------
+# TOTAL                  51      8    84%
+```
+
+Oops looks like this is including the test files. Would need to exclude them from the report.
